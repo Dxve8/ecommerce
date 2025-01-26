@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 import { Link } from 'react-router-dom';
 
+
+
 const HomePage = () => {
   return (
     <div className="homepage-container">
@@ -35,13 +37,14 @@ const HomePage = () => {
               <i className="bi bi-search"></i>
             </button>
           </form>
+          {/* Navbar  */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Shop</a>
+              <Link className="nav-link" to="/productlisting">Shop</Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">About</a>
@@ -49,9 +52,20 @@ const HomePage = () => {
               <li className="nav-item">
                 <a className="nav-link" href="#">Contact</a>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/login">Login</Link>
-              </li>
+              <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Welcome <br></br>
+            Sign in
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" ><Link className="nav-link" to="/login">Login</Link></a></li>
+            <li><a class="dropdown-item"><Link className="nav-link" to="/">Some other page </Link></a></li>
+            <li> 
+              <hr class="dropdown-divider"/></li>
+            <li><a class="dropdown-item"><Link className="nav-link" to="/">Orders</Link></a></li>
+          </ul>
+        </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/admin">Admin</Link>
               </li>

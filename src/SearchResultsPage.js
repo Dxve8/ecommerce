@@ -37,8 +37,10 @@ const SearchResultsPage = () => {
         return 0;
     }
   });
+  
 
   return (
+    
     <Container className="mt-4">
       <Row className="mb-4">
         <Col md={8}>
